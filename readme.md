@@ -1,5 +1,8 @@
 ## Tests for the document field referencing from the JSON queries
 
+The test cases for the document field references inside JSON queries - completion, navigation, find usages, rename.
+The queries syntax is not checked here.
+
 #####  1. Single-class documents:
 
 * fields without ``@Field`` annotations
@@ -14,4 +17,19 @@
 #####  3. Hierarchies:
 
 * Document class that has few superclasses (that are not documents themselves)
-* Documents hierarchy: both parent and childs are documents
+* Documents hierarchy: both parent and children are documents
+
+
+
+[https://youtrack.jetbrains.com/issue/IDEA-308439](https://youtrack.jetbrains.com/issue/IDEA-308439)
+[https://youtrack.jetbrains.com/issue/IDEA-308475](https://youtrack.jetbrains.com/issue/IDEA-308475)
+[https://youtrack.jetbrains.com/issue/IDEA-308623](https://youtrack.jetbrains.com/issue/IDEA-308623)
+[https://youtrack.jetbrains.com/issue/IDEA-308624](https://youtrack.jetbrains.com/issue/IDEA-308624)
+[https://youtrack.jetbrains.com/issue/IDEA-308625](https://youtrack.jetbrains.com/issue/IDEA-308625)
+[https://youtrack.jetbrains.com/issue/IDEA-308627](https://youtrack.jetbrains.com/issue/IDEA-308627)
+[https://youtrack.jetbrains.com/issue/IDEA-308628](https://youtrack.jetbrains.com/issue/IDEA-308628)
+[https://youtrack.jetbrains.com/issue/IDEA-308629](https://youtrack.jetbrains.com/issue/IDEA-308629)
+[https://youtrack.jetbrains.com/issue/IDEA-308630](https://youtrack.jetbrains.com/issue/IDEA-308630)
+[https://youtrack.jetbrains.com/issue/IDEA-308653](https://youtrack.jetbrains.com/issue/IDEA-308653)
+[https://youtrack.jetbrains.com/issue/IDEA-308655](https://youtrack.jetbrains.com/issue/IDEA-308655)
+[https://youtrack.jetbrains.com/issue/IDEA-308728](https://youtrack.jetbrains.com/issue/IDEA-308728)

@@ -16,7 +16,7 @@ import java.util.Optional;
  */
 public interface SingleDocumentRepository extends MongoRepository<SingleDocument, ObjectId> {
 
-    // ! false error
+    // ! false error - https://youtrack.jetbrains.com/issue/IDEA-308439
     // @Id; no @Field annotation, column_name( '_id') != field_name: reference by column name is not resolved
     @Query("{_id: ObjectId(?0)}")
     Optional<SingleDocument> by_Id(String id);
@@ -25,7 +25,7 @@ public interface SingleDocumentRepository extends MongoRepository<SingleDocument
     @Query("{id: ObjectId(?0)}")
     Optional<SingleDocument> byId(String id);
 
-    // ! false error
+    // ! false error - https://youtrack.jetbrains.com/issue/IDEA-308439
     // no @Field annotation, field_name == column_name: reference is not resolved
     @Query("{one: ?0}")
     List<SingleDocument> byOne(String arg);
@@ -43,7 +43,7 @@ public interface SingleDocumentRepository extends MongoRepository<SingleDocument
     @Query("{four: ?0}")
     List<SingleDocument> byFour(String arg);
 
-    // ! false error
+    // ! false error - https://youtrack.jetbrains.com/issue/IDEA-308439
     // @Field annotation with explicit value, annotation_value == column_name != field_name: reference by field name is not resolved
     @Query("{strFour: ?0}")
     List<SingleDocument> byStrFour(String arg);
@@ -51,6 +51,7 @@ public interface SingleDocumentRepository extends MongoRepository<SingleDocument
     @Query("{with_underscore_one: ?0}")
     List<SingleDocument> byWithUnderScore1(String arg);
 
+    // ! false error - https://youtrack.jetbrains.com/issue/IDEA-308439
     @Query("{with_underscore_two: ?0}")
     List<SingleDocument> byWithUnderScore2(String arg);
 }
